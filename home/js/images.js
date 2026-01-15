@@ -1,17 +1,17 @@
   const app2 = Vue.createApp({
-   data() {
+  data() {
     return {
       manyFoods: [
-        'ihttps://www.w3schools.com/mg_burrito.svg',
-        'img_https://www.w3schools.com/salad.svg',
-        'imhttps://www.w3schools.com/g_cake.svg',
-        'imhttps://www.w3schools.com/g_soup.svg',
-        'imhttps://www.w3schools.com/g_fish.svg',
-        'imhttps://www.w3schools.com/g_pizza.svg',
-        'imhttps://www.w3schools.com/g_rice.svg'
+        'https://www.w3schools.com/w3images/img_burrito.svg',
+        'https://www.w3schools.com/w3images/img_salad.svg',
+        'https://www.w3schools.com/w3images/img_cake.svg',
+        'https://www.w3schools.com/w3images/img_soup.svg',
+        'https://www.w3schools.com/w3images/img_fish.svg',
+        'https://www.w3schools.com/w3images/img_pizza.svg',
+        'https://www.w3schools.com/w3images/img_rice.svg'
       ]
     }
-   }
-  })
-  
-  app2.mount('#app2')
+  }
+})
+ 
+app2.mount('#app2')
