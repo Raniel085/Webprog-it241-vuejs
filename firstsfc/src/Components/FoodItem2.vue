@@ -1,5 +1,5 @@
 <template>
-  <div> class="grapes
+  <div class="grapes">
     <h2>{{ name }}</h2>
     <p>{{ message }}</p>
   </div>
@@ -16,7 +16,6 @@ export default {
 };
 </script>
 
-
 <style>
   .grapes {
     border: dashed black 1px;
@@ -25,5 +24,4 @@ export default {
     padding: 10px;
     background-color: yellow;
   }
-
-  </style>
+</style>
