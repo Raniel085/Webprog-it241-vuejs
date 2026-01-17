@@ -1,10 +1,34 @@
 <template>
-  <h1>Food</h1>
-  <food-item/>
-  <food-item/>
-  <food-item/>
+<div>
+<h2>{{ name }}</h2>
+<p>{{ message }}</p>
+</div>
 </template>
+<script>
 
-<script></script>
+            export default {
 
-<style></style>
+                data() {
+
+                      return {
+
+                              name: 'Apples and Bananas',
+
+                                    message: 'I like apples and bananas'
+
+                      };
+
+                }
+
+            };
+</script>
+ 
+            <style>
+</style>
+
+                      }
+
+                }
+
+            }>
+ 
