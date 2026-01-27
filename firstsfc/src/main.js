@@ -1,10 +1,12 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import FoodItem from './Components/FoodItem.vue' // Capital C
-import FoodItem2 from './Components/FoodItem2.vue' // Capital C
-import PersonalProfile from './Components/PersonalProfile.vue' // Capital C
-import CommentForm from './components/CommentForm.vue' // Check if this is lower or upper
-import Comment from './components/Comment.vue' // Check if this is lower or upper
+
+// Vercel is strict: Use capital 'C' if your folder is named 'Components'
+import FoodItem from './Components/FoodItem.vue'
+import FoodItem2 from './Components/FoodItem2.vue'
+import PersonalProfile from './Components/PersonalProfile.vue' 
+import CommentForm from './Components/CommentForm.vue' 
+import Comment from './Components/Comment.vue' 
 
 const app = createApp(App)
 
