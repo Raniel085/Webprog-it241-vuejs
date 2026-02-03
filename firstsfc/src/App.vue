@@ -1,9 +1,12 @@
 <template>
   <div>
-    <h1>Food</h1>
+    <h1>Food & Music Dashboard</h1>
     
     <food-item />
+    <food-item2 />
     <personal-profile />
+    <rest-api /> <hr />
+
     <comment-form />
     <comment />
 
@@ -17,34 +20,8 @@
         </li>
       </ul>
     </div>
+    <div v-else>
+      <p>Loading instruments or no data found...</p>
+    </div>
   </div>
 </template>
-
-<script setup>
-import { ref, onMounted } from 'vue'
-import { supabase } from './lib/supabaseClient'
-
-const instruments = ref([])
-
-async function getInstruments() {
-  try {
-    const { data, error } = await supabase.from('instruments').select()
-    if (error) throw error
-    if (data) instruments.value = data
-  } catch (err) {
-    console.error("Supabase Error:", err.message)
-  }
-}
-
-onMounted(() => {
-  getInstruments()
-})
-</script>
-
-<style>
-/* Add any global styles here if needed */
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  padding: 20px;
-}
-</style>
