@@ -5,6 +5,8 @@
     <food-item />
     <food-item2 />
     <personal-profile />
+    
+    <hr />
     <rest-api /> <hr />
 
     <comment-form />
@@ -21,7 +23,28 @@
       </ul>
     </div>
     <div v-else>
-      <p>Loading instruments or no data found...</p>
+      <p>Connecting to Supabase...</p>
     </div>
   </div>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import { supabase } from './lib/supabaseClient' // Ensure this file exists!
+
+const instruments = ref([])
+
+async function getInstruments() {
+  try {
+    const { data, error } = await supabase.from('instruments').select()
+    if (error) throw error
+    if (data) instruments.value = data
+  } catch (err) {
+    console.error("Supabase Error:", err.message)
+  }
+}
+
+onMounted(() => {
+  getInstruments()
+})
+</script>

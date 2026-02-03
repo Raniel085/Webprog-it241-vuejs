@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-// Vercel is strict: Use capital 'C' if your folder is named 'Components'
+// 1. Import all your component files
 import FoodItem from './Components/FoodItem.vue'
 import FoodItem2 from './Components/FoodItem2.vue'
 import PersonalProfile from './Components/PersonalProfile.vue' 
@@ -11,10 +11,12 @@ import RestApi from './Components/RestApi.vue'
 
 const app = createApp(App)
 
+// 2. Register them globally so <rest-api /> etc. work in any template
 app.component('food-item', FoodItem)
 app.component('food-item2', FoodItem2)
 app.component('personal-profile', PersonalProfile)
 app.component('comment-form', CommentForm)
 app.component('comment', Comment)
 app.component('rest-api', RestApi)
+
 app.mount('#app')
